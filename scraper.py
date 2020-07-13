@@ -7,28 +7,13 @@ import argparse
 from collections import OrderedDict
 from bs4 import BeautifulSoup
 
-def get_headers():
-
-    return {"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            "accept-encoding": "gzip, deflate, br",
-            "accept-language": "en-GB,en;q=0.9,en-US;q=0.8,ml;q=0.7",
-            "cache-control": "max-age=0",
-            "dnt": "1",
-            "sec-fetch-dest": "document",
-            "sec-fetch-mode": "navigate",
-            "sec-fetch-site": "none",
-            "sec-fetch-user": "?1",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0"}
-
-
 def parse(ticker):
     
     url = "http://finance.yahoo.com/quote/%s?p=%s" % (ticker, ticker)
     response = requests.get(url, headers={"User-agent": "Mozilla/5.0"}).text
     soup = BeautifulSoup(response, "html.parser")   
     
-
+    alldata = soup.find_all("tbody")
 
 if __name__ == "__main__":
     
