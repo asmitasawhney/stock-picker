@@ -5,7 +5,12 @@ The criteria used to evaluate stocks are based on advice from [Rose Shafa](https
 
 ## Methodoly 
 
-...
+1. Start by picking a firm that has some sort of a competitive advantage and is looking to be profitable in the long-term.
+2. Evaluate its EPS (Earnings per share) to ensure a positive upward trend.
+
+    [EPS](https://www.investopedia.com/terms/e/eps.asp) is a company's profit divided by the outstanding shares of its common stock. It is an indication of how much a company makes for each share of its stock and is a metric for a company's profitablity.
+
+3. 
 
 ## Usage
 
