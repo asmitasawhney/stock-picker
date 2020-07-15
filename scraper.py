@@ -18,7 +18,6 @@ def parse(ticker):
         #the structure of html can be revealed by inspecting the website
         #The data we are interested in is divided into 2 tbody --> 8 tr each --> 2 td each
         tbody = soup.find_all("tbody")
-
         tr_col1 = tbody[0].find_all("tr")
         tr_col2 = tbody[1].find_all("tr")
         
@@ -34,8 +33,9 @@ def parse(ticker):
         print("Error with website layout for this ticker")
         tr_col1 = tr_col2 = None
     
-    
-    print(data_dict.get("EPS (TTM)"))
+    print("Current EPS (TTM) : " , data_dict.get("EPS (TTM)"))
+    link = "http://financials.morningstar.com/ratios/r.html?t=" + ticker
+    print("Historical EPS values for this firm can be found here: ", link)
 
 
 if __name__ == "__main__":
